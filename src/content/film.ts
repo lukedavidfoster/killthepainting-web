@@ -59,7 +59,7 @@ export const film = {
   /** Full-bleed hero frame. 16:9 or wider, at least 2400px across. */
   heroStill: {
     src: "/images/hero.jpg",
-    alt: "TODO: describe the hero frame",
+    alt: "The artist lying against a graffiti wall, looking up",
   },
 
   /** Frame beside the synopsis, and behind the trailer play button. 16:9. */
