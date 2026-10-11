@@ -1,0 +1,240 @@
+import Image from "next/image";
+import { Hero } from "@/components/Hero";
+import { Nav } from "@/components/Nav";
+import { Trailer } from "@/components/Trailer";
+import { film } from "@/content/film";
+import { publicAsset } from "@/lib/assets";
+import { movieJsonLd } from "@/lib/jsonld";
+
+const monthDay = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  day: "numeric",
+  timeZone: "UTC",
+});
+
+const link = "transition-colors hover:text-pink";
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return <h2 className="caps text-pink mb-8 text-[0.74rem]">{children}</h2>;
+}
+
+export default function Home() {
+  const poster = publicAsset(film.poster.src);
+  const director = film.credits.find(
+    (c) => /direct/i.test(c.role) && c.name !== "TODO",
+  )?.name;
+  const credits = film.credits.filter((c) => c.name !== "TODO");
+  const hasPressKit = publicAsset(film.links.pressKit) !== null;
+  const email = film.links.contactEmail;
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(movieJsonLd()) }}
+      />
+      <Nav />
+
+      <main>
+        <Hero />
+
+        {/* About and trailer sit together: the frame on the left, the pitch on
+            the right, the way the key art pairs image with type. */}
+        <section id="about" className="bg-ink">
+          <div className="mx-auto grid max-w-[82rem] items-center gap-12 px-6 py-20 sm:px-10 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-28">
+            <div id="watch" className="scroll-mt-28">
+              <Trailer
+                youTubeId={film.trailerYouTubeId}
+                still={publicAsset(film.aboutStill.src)}
+                stillAlt={film.aboutStill.alt}
+                filmTitle={film.title}
+              />
+            </div>
+
+            <div className="max-w-[34rem]">
+              <h2 className="caps text-pink text-[0.82rem] leading-[1.8]">
+                {film.aboutHeading}
+              </h2>
+
+              <div className="mt-7 space-y-5 text-[1.18rem] leading-[1.65]">
+                {film.synopsis.map((para) => (
+                  <p key={para.slice(0, 24)}>
+                    {para.startsWith(film.title) ? (
+                      <>
+                        <i>{film.title}</i>
+                        {para.slice(film.title.length)}
+                      </>
+                    ) : (
+                      para
+                    )}
+                  </p>
+                ))}
+              </div>
+
+              <hr className="border-pink mt-10 w-16 border-0 border-t-2" />
+
+              <p className="caps text-haze mt-6 text-[0.72rem]">
+                {director && director !== "TODO" ? `A film by ${director} · ` : ""}
+                {film.year}
+                {film.runtimeMinutes ? ` · ${film.runtimeMinutes} min` : ""}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {film.laurels.length > 0 && (
+          <section aria-label="Selections and awards" className="border-t border-white/8">
+            <ul className="mx-auto flex max-w-[82rem] flex-wrap items-center justify-center gap-x-12 gap-y-8 px-6 py-14 sm:px-10">
+              {film.laurels.map((laurel) => (
+                <li key={laurel.src}>
+                  <Image
+                    src={laurel.src}
+                    alt={laurel.alt}
+                    width={160}
+                    height={96}
+                    className="h-[76px] w-auto"
+                  />
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <section id="press" className="border-t border-white/8">
+          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
+            <SectionLabel>Press</SectionLabel>
+
+            {film.press.length > 0 ? (
+              <ul className="grid gap-10 md:grid-cols-2">
+                {film.press.map((item) => (
+                  <li key={item.outlet}>
+                    <blockquote className="text-bone text-[1.3rem] leading-[1.5]">
+                      &ldquo;{item.quote}&rdquo;
+                    </blockquote>
+                    <p className="caps text-haze mt-4 text-[0.68rem]">
+                      {item.url ? (
+                        <a href={item.url} className={link}>
+                          {item.outlet}
+                        </a>
+                      ) : (
+                        item.outlet
+                      )}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-haze max-w-[34rem] text-[1.1rem] leading-[1.65]">
+                {hasPressKit
+                  ? "Stills, the poster, and production notes are in the press kit."
+                  : "Press materials are being prepared."}
+                {email ? " For interviews and screeners, write to us." : ""}
+              </p>
+            )}
+
+            {(hasPressKit || email) && (
+              <div className="caps mt-10 flex flex-wrap gap-x-10 gap-y-4 text-[0.72rem]">
+                {hasPressKit && (
+                  <a href={film.links.pressKit} className={`text-pink ${link}`}>
+                    Download the press kit
+                  </a>
+                )}
+                {email && (
+                  <a href={`mailto:${email}`} className={`text-pink ${link}`}>
+                    Request a screener
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        </section>
+
+        <section id="screenings" className="border-t border-white/8">
+          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
+            <SectionLabel>Screenings</SectionLabel>
+
+            {film.screenings.length > 0 ? (
+              <ul className="max-w-[44rem] divide-y divide-white/8">
+                {film.screenings.map((s) => (
+                  <li
+                    key={`${s.date}-${s.venue}`}
+                    className="grid grid-cols-[5rem_1fr] items-baseline gap-x-6 py-5"
+                  >
+                    <time dateTime={s.date} className="caps text-haze text-[0.7rem]">
+                      {monthDay.format(new Date(`${s.date}T00:00:00Z`))}
+                    </time>
+                    <span className="text-[1.1rem]">
+                      {s.url ? (
+                        <a href={s.url} className={link}>
+                          {s.venue}
+                        </a>
+                      ) : (
+                        s.venue
+                      )}
+                      <span className="text-haze">, {s.place}</span>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-haze max-w-[34rem] text-[1.1rem] leading-[1.65]">
+                Festival dates are being confirmed. They will be listed here as soon as
+                they are announced.
+              </p>
+            )}
+          </div>
+        </section>
+
+        <section className="border-t border-white/8">
+          <div className="mx-auto flex max-w-[82rem] flex-col gap-14 px-6 py-20 sm:px-10 lg:flex-row lg:justify-between lg:px-16">
+            <div className="max-w-[34rem] grow">
+              <SectionLabel>Credits</SectionLabel>
+              <dl className="space-y-4">
+                {credits.map((credit) => (
+                  <div
+                    key={credit.role}
+                    className="grid grid-cols-[13rem_1fr] gap-x-5 gap-y-1 max-[30rem]:grid-cols-1"
+                  >
+                    <dt className="caps text-haze pt-1 text-[0.66rem]">{credit.role}</dt>
+                    <dd className="text-bone m-0 text-[1.05rem]">{credit.name}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+
+            {poster && (
+              <Image
+                src={poster}
+                alt={film.poster.alt}
+                width={300}
+                height={450}
+                sizes="(max-width: 640px) 60vw, 240px"
+                className="h-auto w-[60%] max-w-[240px] self-start lg:w-[240px]"
+              />
+            )}
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact" className="border-t border-white/8">
+        <div className="mx-auto flex max-w-[82rem] flex-col gap-8 px-6 py-16 sm:px-10 lg:flex-row lg:items-end lg:justify-between lg:px-16">
+          {email && (
+            <div>
+              <SectionLabel>Contact</SectionLabel>
+              <a
+                href={`mailto:${email}`}
+                className="text-bone hover:text-pink text-[1.3rem] transition-colors"
+              >
+                {email}
+              </a>
+            </div>
+          )}
+
+          <p className="caps text-haze text-[0.66rem]">
+            &copy; {film.year} {film.title}
+          </p>
+        </div>
+      </footer>
+    </>
+  );
+}
