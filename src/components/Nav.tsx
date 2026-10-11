@@ -107,6 +107,14 @@ export function Nav() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href={film.links.soundtrack}
+              className="caps text-bone hover:border-pink hover:text-pink border-b-2 border-transparent pb-1 text-[0.7rem] transition-colors sm:text-[0.78rem]"
+            >
+              Soundtrack
+            </a>
+          </li>
         </ul>
 
         {live.length > 0 && (

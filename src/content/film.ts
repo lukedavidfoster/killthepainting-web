@@ -100,6 +100,8 @@ export const film = {
     youtube: "https://www.youtube.com/@lukedavidfoster",
     x: "",
     letterboxd: "https://letterboxd.com/film/kill-the-painting/",
+    soundtrack:
+      "https://lukedavidfoster.bandcamp.com/album/kill-the-painting-original-soundtrack",
     /**
      * Set this to publish the contact section. While it is empty the section,
      * its navigation entry, and the screener link are all left off the page.
