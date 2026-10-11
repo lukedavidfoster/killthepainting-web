@@ -100,7 +100,7 @@ export const film = {
     youtube: "https://www.youtube.com/@lukedavidfoster",
     x: "",
     letterboxd: "https://letterboxd.com/film/kill-the-painting/",
-    contactEmail: "TODO@example.com",
+    contactEmail: "lukefoster000@gmail.com",
   },
 
   /** Canonical origin, no trailing slash. Set once the domain is live. */
