@@ -48,21 +48,18 @@ shows YouTube's own poster frame.
 
 ## What we still need
 
-Images, as listed above.
+Images: a still from the film for `about.jpg`, the laurels once festivals are
+confirmed, the press kit PDF, and a square source image for the browser icon.
 
 Copy and data, all in `src/content/film.ts`:
 
-1. The runtime in minutes, once the cut is locked.
-2. Credits: director, writer, producers, cinematographer, editor, composer,
-   and the lead cast.
-3. Confirmation of the logline and the synopsis. Both are drafted from the
-   design mockup.
-4. Social links: Instagram, the YouTube channel, X, and Letterboxd.
-5. The contact email address for press and festival enquiries.
-6. Screening dates: date, venue, city, and the ticket link for each.
-7. The domain name, so `siteUrl` can be set.
-8. Press quotes, once reviews are published.
-9. A square source image, 512px or larger, for the browser icon.
+1. **The contact email address.** `TODO@example.com` is a live `mailto:` link
+   in two places on the page. This blocks launch.
+2. The remaining credits: producers, cinematographer, and composer. A credit
+   whose name is still `TODO` is left off the page, so these are hidden now.
+3. Confirmation of the synopsis. It is drafted from the design mockup.
+4. Screening dates: date, venue, city, and the ticket link for each.
+5. Press quotes, once reviews are published.
 
 ## Deployment
 

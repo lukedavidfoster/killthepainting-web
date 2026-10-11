@@ -35,7 +35,8 @@ export const film = {
   title: "Kill the Painting",
 
   /** Set over the hero. Keep it to one sentence. */
-  tagline: "Some things have to be destroyed before they can be seen.",
+  tagline:
+    "Lenny the Painter is an unstoppable force of modern art. But now he can't paint.",
 
   /** The one-line pitch above the synopsis. */
   aboutHeading: "A film about art, identity, and letting go.",
@@ -45,7 +46,7 @@ export const film = {
   ],
 
   /** Runtime in minutes, or null while it is not locked. */
-  runtimeMinutes: null as number | null,
+  runtimeMinutes: 64 as number | null,
 
   /** Release or festival-premiere year. */
   year: 2026,
@@ -71,17 +72,21 @@ export const film = {
   /** Key art. 2:3 poster, at least 1200x1800. */
   poster: {
     src: "/images/poster.jpg",
-    alt: "Kill the Painting poster",
+    alt: "Kill the Painting poster: Lenny stands at a blank canvas",
   },
 
+  /** A credit whose name is still "TODO" is left off the page. */
   credits: [
-    { role: "Directed by", name: "TODO" },
-    { role: "Written by", name: "TODO" },
+    { role: "Directed by", name: "Luke David Foster" },
+    { role: "Written by", name: "Luke David Foster" },
+    { role: "Edited by", name: "Luke David Foster" },
     { role: "Produced by", name: "TODO" },
     { role: "Cinematography", name: "TODO" },
-    { role: "Edited by", name: "TODO" },
     { role: "Music by", name: "TODO" },
-    { role: "Starring", name: "TODO" },
+    {
+      role: "Starring",
+      name: "Michael Pezzuto, Josh Smith, Sydney Paige, Luke David Foster",
+    },
   ] satisfies Credit[],
 
   laurels: [] as Laurel[],
@@ -93,10 +98,10 @@ export const film = {
   links: {
     /** Press kit. Drop the PDF at public/press-kit.pdf. */
     pressKit: "/press-kit.pdf",
-    instagram: "",
-    youtube: "",
+    instagram: "https://www.instagram.com/lukedavidfoster/",
+    youtube: "https://www.youtube.com/@lukedavidfoster",
     x: "",
-    letterboxd: "",
+    letterboxd: "https://letterboxd.com/film/kill-the-painting/",
     contactEmail: "TODO@example.com",
   },
 

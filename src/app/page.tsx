@@ -21,6 +21,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function Home() {
   const poster = publicAsset(film.poster.src);
   const director = film.credits.find((c) => c.role === "Directed by")?.name;
+  const credits = film.credits.filter((c) => c.name !== "TODO");
   const hasPressKit = publicAsset(film.links.pressKit) !== null;
 
   return (
@@ -183,7 +184,7 @@ export default function Home() {
             <div className="max-w-[30rem] grow">
               <SectionLabel>Credits</SectionLabel>
               <dl className="space-y-4">
-                {film.credits.map((credit) => (
+                {credits.map((credit) => (
                   <div
                     key={credit.role}
                     className="grid grid-cols-[10.5rem_1fr] gap-x-5 gap-y-1 max-[26rem]:grid-cols-1"

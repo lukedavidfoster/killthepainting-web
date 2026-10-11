@@ -46,6 +46,22 @@ function XLogo() {
   );
 }
 
+function Letterboxd() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="21"
+      height="21"
+      aria-hidden="true"
+      fill="currentColor"
+    >
+      <circle cx="6.1" cy="12" r="4.3" />
+      <circle cx="12" cy="12" r="4.3" />
+      <circle cx="17.9" cy="12" r="4.3" />
+    </svg>
+  );
+}
+
 const socials = [
   {
     key: "instagram",
@@ -55,6 +71,12 @@ const socials = [
   },
   { key: "youtube", href: film.links.youtube, label: "YouTube", icon: <YouTube /> },
   { key: "x", href: film.links.x, label: "X", icon: <XLogo /> },
+  {
+    key: "letterboxd",
+    href: film.links.letterboxd,
+    label: "Letterboxd",
+    icon: <Letterboxd />,
+  },
 ];
 
 export function Nav() {
