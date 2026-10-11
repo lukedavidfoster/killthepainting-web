@@ -29,6 +29,10 @@ export function Hero() {
         aria-hidden="true"
         className="via-night/15 to-night/70 absolute inset-0 bg-gradient-to-r from-transparent"
       />
+      <div
+        aria-hidden="true"
+        className="via-ink/60 to-ink pointer-events-none absolute inset-x-0 bottom-0 h-[35svh] bg-linear-to-b from-transparent"
+      />
 
       <div className="relative mx-auto flex w-full max-w-[82rem] justify-center px-6 pt-28 pb-16 sm:px-10 lg:justify-end lg:px-16">
         <div className="flex w-full max-w-[34rem] flex-col items-center text-center">
