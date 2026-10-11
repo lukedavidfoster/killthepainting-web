@@ -20,7 +20,9 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 export default function Home() {
   const poster = publicAsset(film.poster.src);
-  const director = film.credits.find((c) => c.role === "Directed by")?.name;
+  const director = film.credits.find(
+    (c) => /direct/i.test(c.role) && c.name !== "TODO",
+  )?.name;
   const credits = film.credits.filter((c) => c.name !== "TODO");
   const hasPressKit = publicAsset(film.links.pressKit) !== null;
 
@@ -181,13 +183,13 @@ export default function Home() {
 
         <section className="border-t border-white/8">
           <div className="mx-auto flex max-w-[82rem] flex-col gap-14 px-6 py-20 sm:px-10 lg:flex-row lg:justify-between lg:px-16">
-            <div className="max-w-[30rem] grow">
+            <div className="max-w-[34rem] grow">
               <SectionLabel>Credits</SectionLabel>
               <dl className="space-y-4">
                 {credits.map((credit) => (
                   <div
                     key={credit.role}
-                    className="grid grid-cols-[10.5rem_1fr] gap-x-5 gap-y-1 max-[26rem]:grid-cols-1"
+                    className="grid grid-cols-[13rem_1fr] gap-x-5 gap-y-1 max-[30rem]:grid-cols-1"
                   >
                     <dt className="caps text-haze pt-1 text-[0.66rem]">{credit.role}</dt>
                     <dd className="text-bone m-0 text-[1.05rem]">{credit.name}</dd>

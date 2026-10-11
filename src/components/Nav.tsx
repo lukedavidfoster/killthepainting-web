@@ -85,36 +85,42 @@ export function Nav() {
   return (
     <nav
       aria-label="Main"
-      className="bg-night/60 fixed inset-x-0 top-0 z-50 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 border-b border-white/8 px-6 py-5 backdrop-blur-md sm:px-10"
+      className="bg-night/60 fixed inset-x-0 top-0 z-50 border-b border-white/8 px-6 py-5 backdrop-blur-md sm:px-10"
     >
-      <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 sm:gap-x-10">
-        {sections.map((section) => (
-          <li key={section.id}>
-            <a
-              href={`#${section.id}`}
-              className="caps text-bone hover:border-pink hover:text-pink border-b-2 border-transparent pb-1 text-[0.7rem] transition-colors sm:text-[0.78rem]"
-            >
-              {section.label}
-            </a>
-          </li>
-        ))}
-      </ul>
+      {/* Three columns so the links stay centred and the icons stay right,
+          without one ever being laid over the other. Below lg they stack. */}
+      <div className="mx-auto grid w-full max-w-[82rem] items-center gap-y-3 lg:grid-cols-[1fr_auto_1fr]">
+        <span className="hidden lg:block" aria-hidden="true" />
 
-      {live.length > 0 && (
-        <ul className="flex items-center gap-5 sm:absolute sm:right-10">
-          {live.map((social) => (
-            <li key={social.key}>
+        <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 sm:gap-x-10">
+          {sections.map((section) => (
+            <li key={section.id}>
               <a
-                href={social.href}
-                aria-label={social.label}
-                className="text-bone hover:text-pink block transition-colors"
+                href={`#${section.id}`}
+                className="caps text-bone hover:border-pink hover:text-pink border-b-2 border-transparent pb-1 text-[0.7rem] transition-colors sm:text-[0.78rem]"
               >
-                {social.icon}
+                {section.label}
               </a>
             </li>
           ))}
         </ul>
-      )}
+
+        {live.length > 0 && (
+          <ul className="flex items-center justify-center gap-5 lg:justify-end">
+            {live.map((social) => (
+              <li key={social.key}>
+                <a
+                  href={social.href}
+                  aria-label={social.label}
+                  className="text-bone hover:text-pink block transition-colors"
+                >
+                  {social.icon}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </nav>
   );
 }

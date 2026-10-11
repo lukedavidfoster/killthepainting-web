@@ -5,9 +5,9 @@ import { film } from "@/content/film";
  * so keep it in step with the content module.
  */
 export function movieJsonLd() {
-  const credit = (role: string) =>
+  const credit = (keyword: RegExp) =>
     film.credits
-      .filter((c) => c.role === role && c.name !== "TODO")
+      .filter((c) => keyword.test(c.role) && c.name !== "TODO")
       .flatMap((c) => c.name.split(",").map((n) => n.trim()))
       .map((name) => ({ "@type": "Person", name }));
 
@@ -20,10 +20,10 @@ export function movieJsonLd() {
     image: `${film.siteUrl}${film.poster.src}`,
     ...(film.runtimeMinutes ? { duration: `PT${film.runtimeMinutes}M` } : {}),
     dateCreated: String(film.year),
-    director: credit("Directed by"),
-    author: credit("Written by"),
-    producer: credit("Produced by"),
-    actor: credit("Starring"),
+    director: credit(/direct/i),
+    author: credit(/writ/i),
+    producer: credit(/produc/i),
+    actor: credit(/starring|cast/i),
     ...(film.trailerYouTubeId.startsWith("TODO")
       ? {}
       : {
