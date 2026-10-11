@@ -1,7 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <circle cx="32" cy="32" r="32" fill="#0b0b0d"/>
   <g transform="translate(5.76 5.76) scale(.82)">
-    <path d="M14 10h11v18L40 10h14L35 32l20 22H40L25 37v17H14z" fill="#00729b" transform="translate(-2 3)"/>
+    <g fill="#00729b">
+      <path d="M14 10h11v18L40 10h14L35 32l20 22H40L25 37v17H14z" transform="translate(-2 3)"/>
+      <path d="M14 10L25 10l-2 3L12 13z M25 10L25 28l-2 3L23 13z M25 28L40 10l-2 3L23 31z M40 10L54 10l-2 3L38 13z M54 10L35 32l-2 3L52 13z M35 32L55 54l-2 3L33 35z M55 54L40 54l-2 3L53 57z M40 54L25 37l-2 3L38 57z M25 37L25 54l-2 3L23 40z M25 54L14 54l-2 3L23 57z M14 54L14 10l-2 3L12 57z"/>
+    </g>
     <path d="M14 10h11v18L40 10h14L35 32l20 22H40L25 37v17H14z" fill="#ff6df0"/>
   </g>
 </svg>
