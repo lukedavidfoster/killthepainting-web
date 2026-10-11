@@ -100,7 +100,11 @@ export const film = {
     youtube: "https://www.youtube.com/@lukedavidfoster",
     x: "",
     letterboxd: "https://letterboxd.com/film/kill-the-painting/",
-    contactEmail: "lukefoster000@gmail.com",
+    /**
+     * Set this to publish the contact section. While it is empty the section,
+     * its navigation entry, and the screener link are all left off the page.
+     */
+    contactEmail: "",
   },
 
   /** Canonical origin, no trailing slash. Set once the domain is live. */

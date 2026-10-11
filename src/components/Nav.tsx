@@ -81,6 +81,10 @@ const socials = [
 
 export function Nav() {
   const live = socials.filter((s) => s.href);
+  // Contact only appears once there is an address to send people to.
+  const shown = sections.filter(
+    (section) => section.id !== "contact" || film.links.contactEmail,
+  );
 
   return (
     <nav
@@ -93,7 +97,7 @@ export function Nav() {
         <span className="hidden lg:block" aria-hidden="true" />
 
         <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 sm:gap-x-10">
-          {sections.map((section) => (
+          {shown.map((section) => (
             <li key={section.id}>
               <a
                 href={`#${section.id}`}

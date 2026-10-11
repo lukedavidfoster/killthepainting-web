@@ -53,11 +53,14 @@ confirmed, the press kit PDF, and a square source image for the browser icon.
 
 Copy and data, all in `src/content/film.ts`:
 
-1. The remaining credits: producers, cinematographer, and composer. A credit
+1. The contact email address. While `contactEmail` is empty the contact
+   section, its navigation entry, and the screener link are all left off the
+   page. Set it to publish them.
+2. The remaining credits: producers, cinematographer, and composer. A credit
    whose name is still `TODO` is left off the page, so these are hidden now.
-2. Confirmation of the synopsis. It is drafted from the design mockup.
-3. Screening dates: date, venue, city, and the ticket link for each.
-4. Press quotes, once reviews are published.
+3. Confirmation of the synopsis. It is drafted from the design mockup.
+4. Screening dates: date, venue, city, and the ticket link for each.
+5. Press quotes, once reviews are published.
 
 Nothing in this list blocks a launch. Each one is hidden or held until it
 arrives.

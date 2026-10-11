@@ -25,6 +25,7 @@ export default function Home() {
   )?.name;
   const credits = film.credits.filter((c) => c.name !== "TODO");
   const hasPressKit = publicAsset(film.links.pressKit) !== null;
+  const email = film.links.contactEmail;
 
   return (
     <>
@@ -124,24 +125,27 @@ export default function Home() {
               </ul>
             ) : (
               <p className="text-haze max-w-[34rem] text-[1.1rem] leading-[1.65]">
-                Stills, the poster, and production notes are in the press kit. For
-                interviews and screeners, write to us.
+                {hasPressKit
+                  ? "Stills, the poster, and production notes are in the press kit."
+                  : "Press materials are being prepared."}
+                {email ? " For interviews and screeners, write to us." : ""}
               </p>
             )}
 
-            <div className="caps mt-10 flex flex-wrap gap-x-10 gap-y-4 text-[0.72rem]">
-              {hasPressKit && (
-                <a href={film.links.pressKit} className={`text-pink ${link}`}>
-                  Download the press kit
-                </a>
-              )}
-              <a
-                href={`mailto:${film.links.contactEmail}`}
-                className={`text-pink ${link}`}
-              >
-                Request a screener
-              </a>
-            </div>
+            {(hasPressKit || email) && (
+              <div className="caps mt-10 flex flex-wrap gap-x-10 gap-y-4 text-[0.72rem]">
+                {hasPressKit && (
+                  <a href={film.links.pressKit} className={`text-pink ${link}`}>
+                    Download the press kit
+                  </a>
+                )}
+                {email && (
+                  <a href={`mailto:${email}`} className={`text-pink ${link}`}>
+                    Request a screener
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         </section>
 
@@ -214,15 +218,17 @@ export default function Home() {
 
       <footer id="contact" className="border-t border-white/8">
         <div className="mx-auto flex max-w-[82rem] flex-col gap-8 px-6 py-16 sm:px-10 lg:flex-row lg:items-end lg:justify-between lg:px-16">
-          <div>
-            <SectionLabel>Contact</SectionLabel>
-            <a
-              href={`mailto:${film.links.contactEmail}`}
-              className="text-bone hover:text-pink text-[1.3rem] transition-colors"
-            >
-              {film.links.contactEmail}
-            </a>
-          </div>
+          {email && (
+            <div>
+              <SectionLabel>Contact</SectionLabel>
+              <a
+                href={`mailto:${email}`}
+                className="text-bone hover:text-pink text-[1.3rem] transition-colors"
+              >
+                {email}
+              </a>
+            </div>
+          )}
 
           <p className="caps text-haze text-[0.66rem]">
             &copy; {film.year} {film.title}
