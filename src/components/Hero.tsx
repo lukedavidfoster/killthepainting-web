@@ -18,7 +18,7 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[30%_50%]"
+          className="object-cover object-[32%_42%]"
         />
       ) : null}
 

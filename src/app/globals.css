@@ -25,7 +25,7 @@ html {
   background-color: var(--color-night);
   scroll-behavior: smooth;
   /* Anchors land below the fixed nav. */
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 7rem;
 }
 
 @media (prefers-reduced-motion: reduce) {

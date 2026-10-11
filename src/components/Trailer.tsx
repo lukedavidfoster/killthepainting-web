@@ -18,6 +18,8 @@ type Props = {
 export function Trailer({ youTubeId, still, stillAlt, filmTitle }: Props) {
   const [playing, setPlaying] = useState(false);
   const pending = youTubeId.startsWith("TODO");
+  const frame =
+    still ?? (pending ? null : `https://i.ytimg.com/vi/${youTubeId}/maxresdefault.jpg`);
 
   return (
     <div className="bg-ink relative aspect-video w-full overflow-hidden">
@@ -31,10 +33,10 @@ export function Trailer({ youTubeId, still, stillAlt, filmTitle }: Props) {
         />
       ) : (
         <>
-          {still ? (
+          {frame ? (
             <Image
-              src={still}
-              alt={stillAlt}
+              src={frame}
+              alt={still ? stillAlt : `A frame from the ${filmTitle} trailer`}
               fill
               sizes="(max-width: 900px) 100vw, 680px"
               className="object-cover"

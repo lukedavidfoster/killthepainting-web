@@ -35,15 +35,16 @@ soon as it is present. No code change is needed.
 
 | File | What it is | Size |
 | --- | --- | --- |
-| `public/images/title-treatment.png` | The designed title lockup, transparent background | 1800px wide or more |
-| `public/images/hero.jpg` | The full-bleed frame behind the title | 2400px wide or more |
+| `public/images/title-treatment.png` | The designed title lockup, transparent background | supplied |
+| `public/images/hero.jpg` | The full-bleed frame behind the title | supplied |
 | `public/images/about.jpg` | The frame behind the trailer play button | 1920x1080 or more |
 | `public/images/poster.jpg` | Key art, 2:3 | 1200x1800 or more |
 | `public/images/laurels/*.png` | One file per festival laurel, transparent | 300px wide or more |
 | `public/press-kit.pdf` | The press kit | — |
 
 Compress each image before you commit it. The hero frame should be under
-400 KB.
+400 KB. Until a still from the film is supplied for `about.jpg`, the trailer
+shows YouTube's own poster frame.
 
 ## What we still need
 
@@ -51,18 +52,17 @@ Images, as listed above.
 
 Copy and data, all in `src/content/film.ts`:
 
-1. The trailer's YouTube video id — the part of the watch URL after `v=`.
-2. The runtime in minutes, once the cut is locked.
-3. Credits: director, writer, producers, cinematographer, editor, composer,
+1. The runtime in minutes, once the cut is locked.
+2. Credits: director, writer, producers, cinematographer, editor, composer,
    and the lead cast.
-4. Confirmation of the logline and the synopsis. Both are drafted from the
+3. Confirmation of the logline and the synopsis. Both are drafted from the
    design mockup.
-5. Social links: Instagram, the YouTube channel, X, and Letterboxd.
-6. The contact email address for press and festival enquiries.
-7. Screening dates: date, venue, city, and the ticket link for each.
-8. The domain name, so `siteUrl` can be set.
-9. Press quotes, once reviews are published.
-10. A square source image, 512px or larger, for the browser icon.
+4. Social links: Instagram, the YouTube channel, X, and Letterboxd.
+5. The contact email address for press and festival enquiries.
+6. Screening dates: date, venue, city, and the ticket link for each.
+7. The domain name, so `siteUrl` can be set.
+8. Press quotes, once reviews are published.
+9. A square source image, 512px or larger, for the browser icon.
 
 ## Deployment
 

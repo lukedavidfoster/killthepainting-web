@@ -18,11 +18,11 @@ export function TitleLockup({ artwork, title }: Props) {
         <Image
           src={artwork}
           alt={title}
-          width={900}
-          height={520}
+          width={1217}
+          height={1194}
           priority
-          sizes="(max-width: 700px) 92vw, 640px"
-          className="h-auto w-full max-w-[40rem]"
+          sizes="(max-width: 700px) 82vw, 440px"
+          className="h-auto w-full max-w-[27.5rem]"
         />
       </h1>
     );

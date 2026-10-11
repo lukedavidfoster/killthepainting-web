@@ -63,7 +63,7 @@ export function Nav() {
   return (
     <nav
       aria-label="Main"
-      className="fixed inset-x-0 top-0 z-50 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 px-6 py-5 sm:px-10"
+      className="bg-night/60 fixed inset-x-0 top-0 z-50 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 border-b border-white/8 px-6 py-5 backdrop-blur-md sm:px-10"
     >
       <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 sm:gap-x-10">
         {sections.map((section) => (
