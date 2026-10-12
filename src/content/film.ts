@@ -75,6 +75,13 @@ export const film = {
     alt: "Kill the Painting poster: Lenny stands at a blank canvas",
   },
 
+  /** Credits triptych, ordered from left to right. */
+  posterTriptych: [
+    { src: "/images/poster-1.jpg", alt: "Kill the Painting poster: a close-up of Lenny against a graffiti wall" },
+    { src: "/images/poster.jpg", alt: "Kill the Painting poster: Lenny stands at a blank canvas" },
+    { src: "/images/poster-2.jpg", alt: "Kill the Painting poster: Lenny sits beside a blank canvas on a bridge" },
+  ],
+
   /** A credit whose name is still "TODO" is left off the page. */
   credits: [
     { role: "Written, directed and edited by", name: "Luke David Foster" },

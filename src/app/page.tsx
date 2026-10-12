@@ -19,7 +19,6 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 export default function Home() {
-  const poster = publicAsset(film.poster.src);
   const director = film.credits.find(
     (c) => /direct/i.test(c.role) && c.name !== "TODO",
   )?.name;
@@ -194,8 +193,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t border-white/8">
-          <div className="mx-auto flex max-w-[82rem] flex-col gap-14 px-6 py-20 sm:px-10 lg:flex-row lg:justify-between lg:px-16">
+        <section id="credits" className="border-t border-white/8">
+          <div className="mx-auto flex max-w-[82rem] flex-col gap-14 px-6 py-20 sm:px-10 lg:px-16">
             <div className="max-w-[34rem] grow">
               <SectionLabel>Credits</SectionLabel>
               <dl className="space-y-4">
@@ -211,16 +210,19 @@ export default function Home() {
               </dl>
             </div>
 
-            {poster && (
-              <Image
-                src={poster}
-                alt={film.poster.alt}
-                width={300}
-                height={450}
-                sizes="(max-width: 640px) 60vw, 240px"
-                className="h-auto w-[60%] max-w-[240px] self-start lg:w-[240px]"
-              />
-            )}
+            <div aria-label="Film poster triptych" className="grid grid-cols-3 items-start gap-3 sm:gap-6">
+              {film.posterTriptych.map((poster) => (
+                <Image
+                  key={poster.src}
+                  src={poster.src}
+                  alt={poster.alt}
+                  width={1200}
+                  height={1800}
+                  sizes="(max-width: 640px) 30vw, (max-width: 1312px) 28vw, 390px"
+                  className="h-auto w-full"
+                />
+              ))}
+            </div>
           </div>
         </section>
       </main>
