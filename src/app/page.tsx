@@ -137,10 +137,10 @@ export default function Home() {
               />
             </figure>
 
-            <p className="caps text-[0.74rem]">
+            <p className="caps text-[0.82rem]">
               <a
                 href={film.links.soundtrack}
-                className="text-pink transition-colors hover:text-bone"
+                className="text-pink underline underline-offset-4 transition-colors hover:text-bone"
               >
                 BUY THE ORIGINAL SOUNDTRACK
               </a>
