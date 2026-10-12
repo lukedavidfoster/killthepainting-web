@@ -125,5 +125,6 @@ export const sections = [
   { id: "about", label: "About" },
   { id: "watch", label: "Watch" },
   { id: "release", label: "Release" },
+  { id: "merch", label: "Merch" },
   { id: "contact", label: "Contact" },
 ] as const;

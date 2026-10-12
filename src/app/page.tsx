@@ -149,6 +149,12 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="merch" className="border-t border-white/8">
+          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
+            <SectionLabel>Merch</SectionLabel>
+          </div>
+        </section>
+
         <section aria-label="Film posters" className="border-t border-white/8">
           <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
             <div aria-label="Film poster triptych" className="grid grid-cols-3 items-start gap-3 sm:gap-6">
