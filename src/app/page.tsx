@@ -125,7 +125,7 @@ export default function Home() {
               <SectionLabel>Soundtrack</SectionLabel>
             </div>
 
-            <figure className="mb-5 max-w-[52rem]">
+            <figure className="mb-12 max-w-[52rem]">
               <figcaption className="text-haze mb-5 max-w-[34rem] text-[1.1rem] leading-[1.65]">Behind the Scenes Look:</figcaption>
               <iframe
                 className="aspect-video w-full"
@@ -137,12 +137,12 @@ export default function Home() {
               />
             </figure>
 
-            <p className="mb-7 text-[1.25rem] leading-[1.5] sm:text-[1.35rem]">
+            <p className="caps text-[0.74rem]">
               <a
                 href={film.links.soundtrack}
-                className="text-pink underline underline-offset-4 transition-colors hover:text-bone"
+                className="text-pink transition-colors hover:text-bone"
               >
-                Buy the Original Soundtrack
+                BUY THE ORIGINAL SOUNDTRACK
               </a>
             </p>
 
