@@ -123,7 +123,6 @@ export const film = {
 export const sections = [
   { id: "top", label: "Home" },
   { id: "about", label: "About" },
-  { id: "watch", label: "Watch" },
   { id: "release", label: "Release" },
   { id: "merch", label: "Merch" },
   { id: "contact", label: "Contact" },
