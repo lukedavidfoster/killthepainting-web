@@ -39,7 +39,9 @@ export function Trailer({ youTubeId, still, stillAlt, filmTitle }: Props) {
               alt={still ? stillAlt : `A frame from the ${filmTitle} trailer`}
               fill
               sizes="(max-width: 900px) 100vw, 680px"
-              className="object-cover"
+              // Crop the thin white edge in YouTube's thumbnail; local stills
+              // keep their original framing.
+              className={still ? "object-cover" : "scale-[1.01] object-cover"}
             />
           ) : null}
 
