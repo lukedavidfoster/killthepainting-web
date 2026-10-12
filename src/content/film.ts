@@ -35,10 +35,11 @@ export const film = {
   title: "Kill the Painting",
 
   /** Set over the hero. Keep it to one sentence. */
-  tagline: "What is a painting actually worth?",
+  tagline:
+    "Lenny the Painter is an unstoppable force of modern art. But now he can't paint.",
 
   /** The one-line pitch above the synopsis. */
-  aboutHeading: "A film about art, identity, and letting go.",
+  aboutHeading: "What is a painting actually worth?",
 
   synopsis: [
     "Kill the Painting follows an artist at a crossroads, where creation and destruction blur, and the lines between self, art, and reality begin to unravel.",
