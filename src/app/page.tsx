@@ -210,6 +210,11 @@ export default function Home() {
               </dl>
             </div>
 
+          </div>
+        </section>
+
+        <section id="soundtrack" className="border-t border-white/8">
+          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
             <div>
               <SectionLabel>Soundtrack</SectionLabel>
             </div>
