@@ -42,7 +42,7 @@ export const film = {
   aboutHeading: "What is a painting actually worth?",
 
   synopsis: [
-    "Abandoned by his muse, creatively empty and vulnerable, painting sensation Lenny Lonnagain needs something to inspire him. Anything, to inspire him.",
+    "Abandoned by his muse. Creatively empty. Vulnerable. Painting sensation Lenny Lonnagain needs something to inspire him. Anything, to inspire him.",
   ],
 
   /** Runtime in minutes, or null while it is not locked. */
