@@ -126,7 +126,7 @@ export default function Home() {
             </div>
 
             <figure className="mb-14 max-w-[52rem]">
-              <figcaption className="text-bone mb-5 text-[1.18rem]">Behind the Scenes Look</figcaption>
+              <figcaption className="text-haze mb-5 max-w-[34rem] text-[1.1rem] leading-[1.65]">Behind the Scenes Look:</figcaption>
               <iframe
                 className="aspect-video w-full"
                 src="https://www.youtube-nocookie.com/embed/1GjRDZwAsPY"
