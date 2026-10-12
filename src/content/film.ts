@@ -78,7 +78,7 @@ export const film = {
   /** A credit whose name is still "TODO" is left off the page. */
   credits: [
     { role: "Written, directed and edited by", name: "Luke David Foster" },
-    { role: "Produced by", name: "TODO" },
+    { role: "Production by", name: "Lucas Washington" },
     { role: "Cinematography", name: "TODO" },
     { role: "Music by", name: "TODO" },
     {
