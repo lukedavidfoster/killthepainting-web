@@ -42,7 +42,7 @@ export const film = {
   aboutHeading: "What is a painting actually worth?",
 
   synopsis: [
-    "Kill the Painting follows an artist at a crossroads, where creation and destruction blur, and the lines between self, art, and reality begin to unravel.",
+    "Abandoned by his muse, creatively empty and vulnerable, painting sensation Lenny Lonnagain needs something to inspire him. Anything, to inspire him.",
   ],
 
   /** Runtime in minutes, or null while it is not locked. */
