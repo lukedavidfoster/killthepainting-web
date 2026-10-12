@@ -6,14 +6,6 @@ import { film } from "@/content/film";
 import { publicAsset } from "@/lib/assets";
 import { movieJsonLd } from "@/lib/jsonld";
 
-const monthDay = new Intl.DateTimeFormat("en-US", {
-  month: "short",
-  day: "numeric",
-  timeZone: "UTC",
-});
-
-const link = "transition-colors hover:text-pink";
-
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return <h2 className="caps text-pink mb-8 text-[0.74rem]">{children}</h2>;
 }
@@ -23,7 +15,6 @@ export default function Home() {
     (c) => /direct/i.test(c.role) && c.name !== "TODO",
   )?.name;
   const credits = film.credits.filter((c) => c.name !== "TODO");
-  const hasPressKit = publicAsset(film.links.pressKit) !== null;
   const email = film.links.contactEmail;
 
   return (
@@ -99,91 +90,6 @@ export default function Home() {
           </section>
         )}
 
-        <section id="press" className="border-t border-white/8">
-          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
-            <SectionLabel>Press</SectionLabel>
-
-            {film.press.length > 0 ? (
-              <ul className="grid gap-10 md:grid-cols-2">
-                {film.press.map((item) => (
-                  <li key={item.outlet}>
-                    <blockquote className="text-bone text-[1.3rem] leading-[1.5]">
-                      &ldquo;{item.quote}&rdquo;
-                    </blockquote>
-                    <p className="caps text-haze mt-4 text-[0.68rem]">
-                      {item.url ? (
-                        <a href={item.url} className={link}>
-                          {item.outlet}
-                        </a>
-                      ) : (
-                        item.outlet
-                      )}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-haze max-w-[34rem] text-[1.1rem] leading-[1.65]">
-                {hasPressKit
-                  ? "Stills, the poster, and production notes are in the press kit."
-                  : "Press materials are being prepared."}
-                {email ? " For interviews and screeners, write to us." : ""}
-              </p>
-            )}
-
-            {(hasPressKit || email) && (
-              <div className="caps mt-10 flex flex-wrap gap-x-10 gap-y-4 text-[0.72rem]">
-                {hasPressKit && (
-                  <a href={film.links.pressKit} className={`text-pink ${link}`}>
-                    Download the press kit
-                  </a>
-                )}
-                {email && (
-                  <a href={`mailto:${email}`} className={`text-pink ${link}`}>
-                    Request a screener
-                  </a>
-                )}
-              </div>
-            )}
-          </div>
-        </section>
-
-        <section id="screenings" className="border-t border-white/8">
-          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
-            <SectionLabel>Screenings</SectionLabel>
-
-            {film.screenings.length > 0 ? (
-              <ul className="max-w-[44rem] divide-y divide-white/8">
-                {film.screenings.map((s) => (
-                  <li
-                    key={`${s.date}-${s.venue}`}
-                    className="grid grid-cols-[5rem_1fr] items-baseline gap-x-6 py-5"
-                  >
-                    <time dateTime={s.date} className="caps text-haze text-[0.7rem]">
-                      {monthDay.format(new Date(`${s.date}T00:00:00Z`))}
-                    </time>
-                    <span className="text-[1.1rem]">
-                      {s.url ? (
-                        <a href={s.url} className={link}>
-                          {s.venue}
-                        </a>
-                      ) : (
-                        s.venue
-                      )}
-                      <span className="text-haze">, {s.place}</span>
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-haze max-w-[34rem] text-[1.1rem] leading-[1.65]">
-                Festival dates are being confirmed. They will be listed here as soon as
-                they are announced.
-              </p>
-            )}
-          </div>
-        </section>
-
         <section id="release" className="border-t border-white/8">
           <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
             <SectionLabel>Release</SectionLabel>
@@ -218,6 +124,18 @@ export default function Home() {
             <div>
               <SectionLabel>Soundtrack</SectionLabel>
             </div>
+
+            <figure className="mb-14 max-w-[52rem]">
+              <figcaption className="text-bone mb-5 text-[1.18rem]">Behind the Scenes Look</figcaption>
+              <iframe
+                className="aspect-video w-full"
+                src="https://www.youtube-nocookie.com/embed/1GjRDZwAsPY"
+                title="Behind the Scenes Look"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </figure>
 
             <div aria-label="Film poster triptych" className="grid grid-cols-3 items-start gap-3 sm:gap-6">
               {film.posterTriptych.map((poster) => (
