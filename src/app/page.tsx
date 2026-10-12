@@ -115,7 +115,6 @@ export default function Home() {
                 ))}
               </dl>
             </div>
-
           </div>
         </section>
 
@@ -126,7 +125,9 @@ export default function Home() {
             </div>
 
             <figure className="mb-12 max-w-[52rem]">
-              <figcaption className="text-haze mb-5 max-w-[34rem] text-[1.1rem] leading-[1.65]">Behind the Scenes Look:</figcaption>
+              <figcaption className="text-haze mb-5 max-w-[34rem] text-[1.1rem] leading-[1.65]">
+                Behind the Scenes Look:
+              </figcaption>
               <iframe
                 className="aspect-video w-full"
                 src="https://www.youtube-nocookie.com/embed/1GjRDZwAsPY"
@@ -140,12 +141,11 @@ export default function Home() {
             <p className="caps text-[0.82rem]">
               <a
                 href={film.links.soundtrack}
-                className="text-pink underline underline-offset-4 transition-colors hover:text-bone"
+                className="text-pink hover:text-bone underline underline-offset-4 transition-colors"
               >
                 BUY THE ORIGINAL SOUNDTRACK
               </a>
             </p>
-
           </div>
         </section>
 
@@ -170,7 +170,10 @@ export default function Home() {
 
         <section aria-label="Film posters" className="border-t border-white/8">
           <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
-            <div aria-label="Film poster triptych" className="grid grid-cols-3 items-start gap-3 sm:gap-6">
+            <div
+              aria-label="Film poster triptych"
+              className="grid grid-cols-3 items-start gap-3 sm:gap-6"
+            >
               {film.posterTriptych.map((poster) => (
                 <Image
                   key={poster.src}
