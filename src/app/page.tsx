@@ -185,6 +185,12 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="release" className="border-t border-white/8">
+          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
+            <SectionLabel>Release</SectionLabel>
+          </div>
+        </section>
+
         <section className="border-t border-white/8">
           <div className="mx-auto flex max-w-[82rem] flex-col gap-14 px-6 py-20 sm:px-10 lg:flex-row lg:justify-between lg:px-16">
             <div className="max-w-[34rem] grow">

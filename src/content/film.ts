@@ -119,5 +119,6 @@ export const sections = [
   { id: "watch", label: "Watch" },
   { id: "press", label: "Press" },
   { id: "screenings", label: "Screenings" },
+  { id: "release", label: "Release" },
   { id: "contact", label: "Contact" },
 ] as const;
