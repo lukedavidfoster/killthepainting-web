@@ -189,7 +189,7 @@ export default function Home() {
           <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
             <SectionLabel>Release</SectionLabel>
             <p className="text-haze max-w-[34rem] text-[1.1rem] leading-[1.65]">
-              release date TBA. Extremely soon.
+              Release date TBA. Extremely soon.
             </p>
           </div>
         </section>
