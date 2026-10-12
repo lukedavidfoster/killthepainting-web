@@ -154,12 +154,12 @@ export default function Home() {
             <SectionLabel>Merch</SectionLabel>
             <figure className="max-w-[52rem]">
               <figcaption className="text-haze mb-5 text-[1.1rem] leading-[1.65]">
-                Human Designed, Hand Printed, 100% Cotton
+                Human Designed, Hand Printed, 100% Cotton, Sexy as Fuck.
               </figcaption>
               <iframe
                 className="aspect-video w-full"
                 src="https://www.youtube-nocookie.com/embed/IfS3z6lp4jM"
-                title="Human Designed, Hand Printed, 100% Cotton"
+                title="Human Designed, Hand Printed, 100% Cotton, Sexy as Fuck."
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
