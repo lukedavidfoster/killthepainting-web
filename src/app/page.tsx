@@ -210,6 +210,10 @@ export default function Home() {
               </dl>
             </div>
 
+            <div>
+              <SectionLabel>Soundtrack</SectionLabel>
+            </div>
+
             <div aria-label="Film poster triptych" className="grid grid-cols-3 items-start gap-3 sm:gap-6">
               {film.posterTriptych.map((poster) => (
                 <Image
