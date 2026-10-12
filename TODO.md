@@ -48,14 +48,15 @@ no code change is needed. Compress every image before you commit it.
 - [ ] **`public/press-kit.pdf`** — the press kit. Until it is here the press
       section says the materials are being prepared.
 
-- [ ] **A square source image**, 512px or larger, for the browser icon.
+- [x] **Create the browser icon.** The circular favicon uses the K from the
+      film's original title artwork, with SVG and ICO versions.
 
 ## Deployment
 
-- [ ] **Import the repository into Vercel.** Keep the detected framework
+- [x] **Import the repository into Vercel.** Keep the detected framework
       preset, Next.js. The site uses no environment variables.
 
-- [ ] **Point `killthepainting.com` at Vercel.** Add the domain under the
+- [x] **Point `killthepainting.com` at Vercel.** Add the domain under the
       project's Domains tab, then update the registrar.
 
 - [ ] **Turn on Vercel Analytics**, if you want traffic figures.
