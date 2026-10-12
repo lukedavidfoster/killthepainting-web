@@ -137,6 +137,15 @@ export default function Home() {
               />
             </figure>
 
+            <p className="mb-14 text-[1.1rem] leading-[1.65]">
+              <a
+                href={film.links.soundtrack}
+                className="text-pink underline underline-offset-4 transition-colors hover:text-bone"
+              >
+                Buy the original soundtrack
+              </a>
+            </p>
+
             <div aria-label="Film poster triptych" className="grid grid-cols-3 items-start gap-3 sm:gap-6">
               {film.posterTriptych.map((poster) => (
                 <Image
