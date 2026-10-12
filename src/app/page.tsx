@@ -152,6 +152,19 @@ export default function Home() {
         <section id="merch" className="border-t border-white/8">
           <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
             <SectionLabel>Merch</SectionLabel>
+            <figure className="max-w-[52rem]">
+              <figcaption className="text-haze mb-5 text-[1.1rem] leading-[1.65]">
+                Human Designed, Hand Printed, 100% Cotton
+              </figcaption>
+              <iframe
+                className="aspect-video w-full"
+                src="https://www.youtube-nocookie.com/embed/IfS3z6lp4jM"
+                title="Human Designed, Hand Printed, 100% Cotton"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </figure>
           </div>
         </section>
 
