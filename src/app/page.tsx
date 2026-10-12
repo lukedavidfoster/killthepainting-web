@@ -137,7 +137,7 @@ export default function Home() {
               />
             </figure>
 
-            <p className="text-[1.25rem] leading-[1.5] sm:text-[1.35rem]">
+            <p className="mb-7 text-[1.25rem] leading-[1.5] sm:text-[1.35rem]">
               <a
                 href={film.links.soundtrack}
                 className="text-pink underline underline-offset-4 transition-colors hover:text-bone"
