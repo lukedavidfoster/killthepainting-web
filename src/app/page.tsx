@@ -90,15 +90,6 @@ export default function Home() {
           </section>
         )}
 
-        <section id="release" className="border-t border-white/8">
-          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
-            <SectionLabel>Release</SectionLabel>
-            <p className="text-haze max-w-[34rem] text-[1.1rem] leading-[1.65]">
-              Release date TBA. Extremely soon.
-            </p>
-          </div>
-        </section>
-
         <section id="credits" className="border-t border-white/8">
           <div className="mx-auto flex max-w-[82rem] flex-col gap-14 px-6 py-20 sm:px-10 lg:px-16">
             <div className="max-w-[34rem] grow">

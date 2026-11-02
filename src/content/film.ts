@@ -131,8 +131,8 @@ export const film = {
 
 export const sections = [
   { id: "top", label: "Home" },
+  { id: "announcement", label: "Announcement" },
   { id: "about", label: "About" },
-  { id: "release", label: "Release" },
   { id: "merch", label: "Merch" },
   { id: "contact", label: "Contact" },
 ] as const;
