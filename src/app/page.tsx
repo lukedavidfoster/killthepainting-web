@@ -30,7 +30,7 @@ export default function Home() {
 
         {/* About and trailer sit together: the frame on the left, the pitch on
             the right, the way the key art pairs image with type. */}
-        <section id="about" className="bg-ink">
+        <section id="about" className="bg-ink border-t border-white/8">
           <div className="mx-auto grid max-w-[82rem] items-center gap-12 px-6 py-20 sm:px-10 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-28">
             <div id="watch" className="scroll-mt-28">
               <Trailer
@@ -89,15 +89,6 @@ export default function Home() {
             </ul>
           </section>
         )}
-
-        <section id="release" className="border-t border-white/8">
-          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
-            <SectionLabel>Release</SectionLabel>
-            <p className="text-haze max-w-[34rem] text-[1.1rem] leading-[1.65]">
-              Release date TBA. Extremely soon.
-            </p>
-          </div>
-        </section>
 
         <section id="credits" className="border-t border-white/8">
           <div className="mx-auto flex max-w-[82rem] flex-col gap-14 px-6 py-20 sm:px-10 lg:px-16">
