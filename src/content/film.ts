@@ -46,7 +46,7 @@ export const film = {
   ],
 
   /** Runtime in minutes, or null while it is not locked. */
-  runtimeMinutes: 64 as number | null,
+  runtimeMinutes: 61 as number | null,
 
   /** Release or festival-premiere year. */
   year: 2026,
