@@ -113,10 +113,7 @@ export default function Home() {
         <section id="merch" className="border-t border-white/8">
           <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
             <SectionLabel>Merch</SectionLabel>
-            <figure>
-              <figcaption className="text-haze mb-5 text-[1.1rem] leading-[1.65]">
-                Human Designed, Hand Printed, 100% Cotton, Sexy as Fuck.
-              </figcaption>
+            <figure className="mx-auto max-w-[42rem]">
               <iframe
                 className="mx-auto aspect-video w-full max-w-[42rem]"
                 src="https://www.youtube-nocookie.com/embed/IfS3z6lp4jM"
@@ -125,6 +122,9 @@ export default function Home() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
+              <figcaption className="text-haze mt-5 text-[1.1rem] leading-[1.65]">
+                Human Designed, Hand Printed, 100% Cotton, Sexy as Fuck.
+              </figcaption>
             </figure>
           </div>
         </section>
