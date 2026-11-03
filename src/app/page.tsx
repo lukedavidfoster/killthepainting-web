@@ -90,22 +90,22 @@ export default function Home() {
           </section>
         )}
 
-        <section id="credits" className="border-t border-white/8">
-          <div className="mx-auto flex max-w-[82rem] flex-col gap-14 px-6 py-20 sm:px-10 lg:px-16">
-            <div className="max-w-[34rem] grow">
-              <SectionLabel>Credits</SectionLabel>
-              <dl className="space-y-4">
-                {credits.map((credit) => (
-                  <div
-                    key={credit.role}
-                    className="grid grid-cols-[13rem_1fr] gap-x-5 gap-y-1 max-[30rem]:grid-cols-1"
-                  >
-                    <dt className="caps text-haze pt-1 text-[0.66rem]">{credit.role}</dt>
-                    <dd className="text-bone m-0 text-[1.05rem]">{credit.name}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
+        <section id="merch" className="border-t border-white/8">
+          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
+            <SectionLabel>Merch</SectionLabel>
+            <figure className="max-w-[52rem]">
+              <figcaption className="text-haze mb-5 text-[1.1rem] leading-[1.65]">
+                Human Designed, Hand Printed, 100% Cotton, Sexy as Fuck.
+              </figcaption>
+              <iframe
+                className="aspect-video w-full"
+                src="https://www.youtube-nocookie.com/embed/IfS3z6lp4jM"
+                title="Human Designed, Hand Printed, 100% Cotton, Sexy as Fuck."
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </figure>
           </div>
         </section>
 
@@ -140,22 +140,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="merch" className="border-t border-white/8">
-          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
-            <SectionLabel>Merch</SectionLabel>
-            <figure className="max-w-[52rem]">
-              <figcaption className="text-haze mb-5 text-[1.1rem] leading-[1.65]">
-                Human Designed, Hand Printed, 100% Cotton, Sexy as Fuck.
-              </figcaption>
-              <iframe
-                className="aspect-video w-full"
-                src="https://www.youtube-nocookie.com/embed/IfS3z6lp4jM"
-                title="Human Designed, Hand Printed, 100% Cotton, Sexy as Fuck."
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </figure>
+        <section id="credits" className="border-t border-white/8">
+          <div className="mx-auto flex max-w-[82rem] flex-col gap-14 px-6 py-20 sm:px-10 lg:px-16">
+            <div className="max-w-[34rem] grow">
+              <SectionLabel>Credits</SectionLabel>
+              <dl className="space-y-4">
+                {credits.map((credit) => (
+                  <div
+                    key={credit.role}
+                    className="grid grid-cols-[13rem_1fr] gap-x-5 gap-y-1 max-[30rem]:grid-cols-1"
+                  >
+                    <dt className="caps text-haze pt-1 text-[0.66rem]">{credit.role}</dt>
+                    <dd className="text-bone m-0 text-[1.05rem]">{credit.name}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </div>
         </section>
 
