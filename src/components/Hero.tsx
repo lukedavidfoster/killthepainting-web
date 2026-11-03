@@ -35,7 +35,7 @@ export function Hero() {
       />
 
       <div className="relative mx-auto flex w-full max-w-[82rem] flex-col items-center px-6 pt-28 pb-16 sm:px-10 lg:px-16">
-        <div className="flex w-full max-w-[34rem] flex-col items-center text-center lg:self-end">
+        <div className="flex w-full max-w-[34rem] flex-col items-center text-center">
           <TitleLockup artwork={publicAsset(film.titleArtwork.src)} title={film.title} />
 
           <p className="caps text-bone mt-9 text-[0.72rem] leading-[1.9] sm:text-[0.82rem]">
