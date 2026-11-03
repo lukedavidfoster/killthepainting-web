@@ -34,14 +34,16 @@ export function Hero() {
         className="via-ink/60 to-ink pointer-events-none absolute inset-x-0 bottom-0 h-[35svh] bg-linear-to-b from-transparent"
       />
 
-      <div className="relative mx-auto flex w-full max-w-[82rem] justify-center px-6 pt-28 pb-16 sm:px-10 lg:justify-end lg:px-16">
-        <div className="flex w-full max-w-[34rem] flex-col items-center text-center">
+      <div className="relative mx-auto flex w-full max-w-[82rem] flex-col items-center px-6 pt-28 pb-16 sm:px-10 lg:px-16">
+        <div className="flex w-full max-w-[34rem] flex-col items-center text-center lg:self-end">
           <TitleLockup artwork={publicAsset(film.titleArtwork.src)} title={film.title} />
 
           <p className="caps text-bone mt-9 text-[0.72rem] leading-[1.9] sm:text-[0.82rem]">
             {film.tagline}
           </p>
+        </div>
 
+        <div className="flex w-full max-w-[34rem] flex-col items-center text-center">
           <div id="announcement" className="mt-9 w-full scroll-mt-28">
             <iframe
               className="aspect-video w-full"
