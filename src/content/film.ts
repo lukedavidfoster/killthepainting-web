@@ -112,7 +112,7 @@ export const film = {
   links: {
     /** Press kit. Drop the PDF at public/press-kit.pdf. */
     pressKit: "/press-kit.pdf",
-    instagram: "https://www.instagram.com/lukedavidfoster/",
+    instagram: "https://www.instagram.com/killthepainting/",
     youtube: "https://www.youtube.com/@lukedavidfoster",
     x: "",
     letterboxd: "https://letterboxd.com/film/kill-the-painting/",
