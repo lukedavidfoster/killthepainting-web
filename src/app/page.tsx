@@ -93,7 +93,7 @@ export default function Home() {
         <section id="merch" className="border-t border-white/8">
           <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
             <SectionLabel>Merch</SectionLabel>
-            <figure className="max-w-[52rem]">
+            <figure className="mx-auto max-w-[42rem]">
               <figcaption className="text-haze mb-5 text-[1.1rem] leading-[1.65]">
                 Human Designed, Hand Printed, 100% Cotton, Sexy as Fuck.
               </figcaption>
@@ -115,7 +115,7 @@ export default function Home() {
               <SectionLabel>Soundtrack</SectionLabel>
             </div>
 
-            <figure className="mb-12 max-w-[52rem]">
+            <figure className="mx-auto mb-12 max-w-[42rem]">
               <figcaption className="text-haze mb-5 max-w-[34rem] text-[1.1rem] leading-[1.65]">
                 Behind the Scenes Look:
               </figcaption>
@@ -129,7 +129,7 @@ export default function Home() {
               />
             </figure>
 
-            <p className="caps text-[0.82rem]">
+            <p className="caps mx-auto max-w-[42rem] text-[0.82rem]">
               <a
                 href={film.links.soundtrack}
                 className="text-pink hover:text-bone underline underline-offset-4 transition-colors"
