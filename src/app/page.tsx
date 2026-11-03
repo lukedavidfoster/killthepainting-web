@@ -134,7 +134,7 @@ export default function Home() {
                 href={film.links.soundtrack}
                 className="text-pink hover:text-bone underline underline-offset-4 transition-colors"
               >
-                BUY THE ORIGINAL SOUNDTRACK
+                LISTEN TO THE ORIGINAL SOUNDTRACK
               </a>
             </p>
           </div>
