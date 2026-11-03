@@ -52,6 +52,10 @@ export function Hero() {
             />
           </div>
 
+          <p className="text-bone mt-6 text-[1.1rem] leading-[1.65]">
+            coming fucking soon.
+          </p>
+
           <a
             href="#watch"
             className="caps border-pink text-pink hover:bg-pink hover:text-night mt-9 inline-flex items-center gap-3 border-2 px-8 py-4 text-[0.72rem] transition-colors sm:text-[0.8rem]"
