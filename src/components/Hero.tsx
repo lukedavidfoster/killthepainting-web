@@ -43,7 +43,7 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="flex w-full max-w-[34rem] flex-col items-center text-center">
+        <div className="flex w-full max-w-[34rem] flex-col items-center text-center lg:max-w-[52rem]">
           <div id="announcement" className="mt-9 w-full scroll-mt-28">
             <iframe
               className="aspect-video w-full"
@@ -54,13 +54,13 @@ export function Hero() {
             />
           </div>
 
-          <p className="text-bone mt-6 text-[1.1rem] leading-[1.65]">
+          <p className="text-bone mt-6 text-[1.1rem] leading-[1.65] lg:text-[1.4rem]">
             coming fucking soon.
           </p>
 
           <a
             href="#watch"
-            className="caps border-pink text-pink hover:bg-pink hover:text-night mt-9 inline-flex items-center gap-3 border-2 px-8 py-4 text-[0.72rem] transition-colors sm:text-[0.8rem]"
+            className="caps border-pink text-pink hover:bg-pink hover:text-night mt-9 inline-flex items-center gap-3 border-2 px-8 py-4 text-[0.72rem] transition-colors sm:text-[0.8rem] lg:gap-4 lg:px-10 lg:py-5 lg:text-[1rem]"
           >
             Watch trailer
             <svg
