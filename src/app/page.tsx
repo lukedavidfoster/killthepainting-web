@@ -93,12 +93,12 @@ export default function Home() {
         <section id="merch" className="border-t border-white/8">
           <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
             <SectionLabel>Merch</SectionLabel>
-            <figure className="mx-auto max-w-[42rem]">
+            <figure>
               <figcaption className="text-haze mb-5 text-[1.1rem] leading-[1.65]">
                 Human Designed, Hand Printed, 100% Cotton, Sexy as Fuck.
               </figcaption>
               <iframe
-                className="aspect-video w-full"
+                className="mx-auto aspect-video w-full max-w-[42rem]"
                 src="https://www.youtube-nocookie.com/embed/IfS3z6lp4jM"
                 title="Human Designed, Hand Printed, 100% Cotton, Sexy as Fuck."
                 loading="lazy"
@@ -115,12 +115,12 @@ export default function Home() {
               <SectionLabel>Soundtrack</SectionLabel>
             </div>
 
-            <figure className="mx-auto mb-12 max-w-[42rem]">
+            <figure className="mb-12">
               <figcaption className="text-haze mb-5 max-w-[34rem] text-[1.1rem] leading-[1.65]">
                 Behind the Scenes Look:
               </figcaption>
               <iframe
-                className="aspect-video w-full"
+                className="mx-auto aspect-video w-full max-w-[42rem]"
                 src="https://www.youtube-nocookie.com/embed/1GjRDZwAsPY"
                 title="Behind the Scenes Look"
                 loading="lazy"
@@ -129,7 +129,7 @@ export default function Home() {
               />
             </figure>
 
-            <p className="caps mx-auto max-w-[42rem] text-[0.82rem]">
+            <p className="caps mx-auto max-w-[42rem] text-center text-[0.82rem]">
               <a
                 href={film.links.soundtrack}
                 className="text-pink hover:text-bone underline underline-offset-4 transition-colors"
