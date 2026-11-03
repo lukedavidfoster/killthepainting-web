@@ -162,7 +162,7 @@ export default function Home() {
         <section aria-label="Film posters" className="border-t border-white/8">
           <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
             <div className="mb-10 flex flex-wrap items-center gap-5">
-              <p className="caps text-haze text-[0.66rem] leading-none">
+              <p className="caps text-haze text-[0.82rem] leading-none">
                 ADD TO YOUR WATCHLIST:
               </p>
               <a
@@ -171,7 +171,7 @@ export default function Home() {
                 className="text-bone hover:text-pink transition-colors"
               >
                 <svg
-                  className="block h-[0.66rem] w-auto"
+                  className="block h-[0.82rem] w-auto"
                   viewBox="2 2 44 20"
                   aria-hidden="true"
                 >
