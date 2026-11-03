@@ -162,7 +162,7 @@ export default function Home() {
         <section aria-label="Film posters" className="border-t border-white/8">
           <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
             <div className="mb-10 flex flex-wrap items-center gap-5">
-              <p className="text-haze text-[1.1rem] leading-[1.65]">
+              <p className="caps text-haze pt-1 text-[0.66rem]">
                 ADD TO YOUR WATCHLIST:
               </p>
               <a
