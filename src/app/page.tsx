@@ -110,6 +110,23 @@ export default function Home() {
           </section>
         )}
 
+        <section
+          id="behind-the-scenes"
+          aria-label="Behind the scenes"
+          className="border-t border-white/8"
+        >
+          <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
+            <iframe
+              className="mx-auto aspect-[9/16] w-full max-w-[24rem]"
+              src="https://www.youtube-nocookie.com/embed/EGvvQZXOf6I"
+              title="Kill the Painting — Behind the Scenes"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </section>
+
         <section id="merch" className="border-t border-white/8">
           <div className="mx-auto max-w-[82rem] px-6 py-20 sm:px-10 lg:px-16">
             <SectionLabel>Merch</SectionLabel>
