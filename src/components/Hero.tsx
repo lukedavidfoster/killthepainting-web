@@ -59,10 +59,10 @@ export function Hero() {
           </p>
 
           <a
-            href="#watch"
+            href="#behind-the-scenes"
             className="caps border-pink text-pink hover:bg-pink hover:text-night mt-9 inline-flex items-center gap-3 border-2 px-8 py-4 text-[0.72rem] transition-colors sm:text-[0.8rem] lg:gap-4 lg:px-10 lg:py-5 lg:text-[1rem]"
           >
-            Watch trailer
+            BEHIND THE SCENES
             <svg
               width="11"
               height="13"
